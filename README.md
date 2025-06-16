@@ -1,6 +1,4 @@
-# JMeter API Test Plan
-
-This repository contains a JMeter test plan designed for testing a RESTful user management API.
+# JMeter API Test Plan for ServeRestApp
 
 Sample project to experiment with [Jmeter](https://jmeter.apache.org/) to test the ServeRest app in localhost using Docker Image.
 
