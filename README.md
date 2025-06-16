@@ -46,7 +46,7 @@ jmeter -g "C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\repor
 
 1. Running in localhost from a Docker Imagem considering that my Windows' machine has 8GB ram + Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz   2.11 GHz + Windows 10. The results is that 1000 threads were accepted for all endpoints considering a ramp-up of 1s. More than this is practically the break's point of the system overloading CPU's usage:
 
-![Local testing execution example](assets/mypipelineJenkins.png)
+![Report HTML](assets/report.png)
 ![Local testing execution example](assets/pipelineExecution.png)
 
 ## ⚙️ Requirements
