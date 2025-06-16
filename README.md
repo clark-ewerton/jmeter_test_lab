@@ -21,7 +21,7 @@ The idea is to hit /login endpoint (the steps below were designed to do so)
 - **GET ALL USERS /usuarios AND set it to a CSV file**: Fetches all users again and save it to a CSV file.
   - **JSR223 PostProcessor - set userId, userEmail and userPassword to csv**: Extracts user IDs, emails, and passwords.
   - **HTTP Header Manager**: Managers headers content-type
-- **POST LOGIN USERS /login AND set it to a CSV file**: Fetches all users and save it to a CSV file.
+- **POST LOGIN USERS /login AND set it to a CSV file**: Perform login action by all users
   - **CSV DataSet Config - read user_id.csv and fetch email and password's user**: Extracts user email and passwords.
   - **JSR223 PostProcessor - save on memory's variables all the bearer tokenssave on memory's variables all the bearer tokens**
   - **HTTP Header Manager**: Managers headers content-type
