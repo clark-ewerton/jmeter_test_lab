@@ -2,6 +2,12 @@
 
 This repository contains a JMeter test plan designed for testing a RESTful user management API.
 
+Sample project to experiment with [Jmeter](https://jmeter.apache.org/) to test the ServeRest app in localhost using Docker Image.
+
+[![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+
 ## 📋 Test Plan Overview
 
 The idea is to hit /login endpoint (the steps below were designed to do so)
@@ -29,13 +35,19 @@ The idea is to hit /login endpoint (the steps below were designed to do so)
 1. Open the `.jmx` file using Apache JMeter.
 2. Please change the number of Threads to the following Thread Groups: DELETE USERS, CREATE USERS and LOGIN USERS
 3. (Optional) Enable and run **DELETE USERS** or **CREATE USERS** groups.
-4. Review results in the **View Results Tree** listener or **Aggregate Reports**.
+4. Review results in the **View Results Tree** listener or **Aggregate Reports**. (It's gonna generate a report.csv)
+5. To generate the report, please use the following command (for Windows):
+ navigate into jmeter folder
+cd C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin
+:: then generate reports
+jmeter -g "C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\report.csv" -o "C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\report\report.html"
 
 ## 📋 Results
 
 1. Running in localhost from a Docker Imagem considering that my Windows' machine has 8GB ram + Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz   2.11 GHz + Windows 10. The results is that 1000 threads were accepted for all endpoints considering a ramp-up of 1s. More than this is practically the break's point of the system overloading CPU's usage:
 
-
+![Local testing execution example](assets/mypipelineJenkins.png)
+![Local testing execution example](assets/pipelineExecution.png)
 
 ## ⚙️ Requirements
 
