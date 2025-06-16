@@ -36,18 +36,34 @@ The idea is to hit /login endpoint (the steps below were designed to do so)
 2. Please change the number of Threads to the following Thread Groups: DELETE USERS, CREATE USERS and LOGIN USERS
 3. (Optional) Enable and run **DELETE USERS** or **CREATE USERS** groups.
 4. Review results in the **View Results Tree** listener or **Aggregate Reports**. (It's gonna generate a report.csv)
-5. To generate the report, please use the following command (for Windows):
- navigate into jmeter folder
-cd C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin
-:: then generate reports
-jmeter -g "C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\report.csv" -o "C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\report\report.html"
+5. **To generate the HTML report (on Windows) Example:**
 
-## 📋 Results
+   - Open the Command Prompt (`cmd`)
+   - Navigate to your JMeter `bin` directory:
+     ```bash
+     cd C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin
+     ```
+   - Run the following command:
+     ```bash
+     jmeter -g "C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\report.csv" -o "C:\Users\clark\OneDrive\Documentos\projetos\apache-jmeter-5.6.3\report\report.html"
+     ```
+---
 
-1. Running in localhost from a Docker Imagem considering that my Windows' machine has 8GB ram + Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz   2.11 GHz + Windows 10. The results is that 1000 threads were accepted for all endpoints considering a ramp-up of 1s. More than this is practically the break's point of the system overloading CPU's usage:
+## 📈 Results
 
-![Report HTML](assets/report.png)
-![Local testing execution example](assets/pipelineExecution.png)
+Tests were executed locally via Docker on a Windows 10 machine with the following specs:
+
+- **RAM**: 8GB  
+- **CPU**: Intel(R) Core(TM) i5-10210U @ 1.60GHz  
+- **JMeter**: 5.6.3
+
+Result: The system handled **1000 concurrent threads** on all endpoints with a ramp-up of 1 second. Beyond this, performance started degrading due to CPU overutilization.
+
+| Report Preview            | Execution Snapshot           |
+|---------------------------|------------------------------|
+| ![Report HTML](assets/report.png) | ![Execution](assets/pipelineExecution.png) |
+
+---
 
 ## ⚙️ Requirements
 
