@@ -31,10 +31,9 @@ The idea is to hit /login endpoint (the steps below were designed to do so)
 ## 🧪 How to Use
 
 1. Open the `.jmx` file using Apache JMeter.
-2. Please change the number of Threads to the following Thread Groups: DELETE USERS, CREATE USERS and LOGIN USERS
-3. (Optional) Enable and run **DELETE USERS** or **CREATE USERS** groups.
-4. Review results in the **View Results Tree** listener or **Aggregate Reports**. (It's gonna generate a report.csv)
-5. **To generate the HTML report (on Windows) Example:**
+2. Please change the number of Threads to the following Thread Groups: DELETE USERS, CREATE USERS and LOGIN USERS (by default it's set to 1000)
+3. Review results in the **View Results Tree** listener or **Aggregate Reports**. (It's gonna generate a report.csv)
+4. **To generate the HTML report (on Windows) Example:**
 
    - Open the Command Prompt (`cmd`)
    - Navigate to your JMeter `bin` directory:
@@ -57,9 +56,11 @@ Tests were executed locally via Docker on a Windows 10 machine with the followin
 
 Result: The system handled **1000 concurrent threads** on all endpoints with a ramp-up of 1 second. Beyond this, performance started degrading due to CPU overutilization.
 
-| Report Preview            | Execution Snapshot           |
+| Report Preview            | Performance Stats            |
 |---------------------------|------------------------------|
-| ![Report HTML](assets/report.png) | ![Execution](assets/pipelineExecution.png) |
+| ![Report HTML](assets/report.png) | ![Execution](assets/performance_stats_1000users.png) |
+
+As you can see during execution of 1000 threads with ram=-up of 1s, the CPU usage got it spike to 150%.
 
 ---
 
