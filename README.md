@@ -31,9 +31,21 @@ The idea is to hit /login endpoint (the steps below were designed to do so)
 ## 🧪 How to Use
 
 1. Open the `.jmx` file using Apache JMeter.
-2. Please change the number of Threads to the following Thread Groups: DELETE USERS, CREATE USERS and LOGIN USERS (by default it's set to 1000)
-3. Review results in the **View Results Tree** listener or **Aggregate Reports**. (It's gonna generate a report.csv)
-4. **To generate the HTML report (on Windows) Example:**
+2. Update the number of **Threads** in the following Thread Groups:  
+   - `DELETE USERS`  
+   - `CREATE USERS`  
+   - `LOGIN USERS`  
+   (The default is set to **1000**)
+3. Adjust the file path in the following Thread Groups:  
+   - `DELETE USERS`  
+   - `LOGIN USERS`  
+   - `SET BEARER TOKENS TO CSV`  
+   
+   The current path is: C:/Users/clark/OneDrive/Documentos/projetos/apache-jmeter-5.6.3/apache-jmeter-5.6.3/bin/user_ids.csv
+   
+    Make sure to update it according to your local environment.
+5. Review results in the **View Results Tree** listener or **Aggregate Reports**. (It's gonna generate a report.csv)
+6. **To generate the HTML report (on Windows) Example:**
 
    - Open the Command Prompt (`cmd`)
    - Navigate to your JMeter `bin` directory:
@@ -67,6 +79,7 @@ As you can see during execution of 1000 threads with ram=-up of 1s, the CPU usag
 ## ⚙️ Requirements
 
 - Apache JMeter 5.6.3 or compatible.
+- Java 8++
 
 ## 📄 License
 
